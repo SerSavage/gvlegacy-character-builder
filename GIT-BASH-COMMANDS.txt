@@ -1,0 +1,54 @@
+========================================
+Git Bash Commands for GitHub Upload
+========================================
+
+Copy and paste these commands one by one into your Git Bash terminal:
+
+1. Navigate to the folder:
+   cd /c/Users/serje/Documents/GVCharBuilder/github-ready
+
+2. Initialize git:
+   git init
+
+3. Add all files:
+   git add .
+
+4. Create commit:
+   git commit -m "Initial commit: Gloria Victis Character Builder"
+
+5. Set branch to main:
+   git branch -M main
+
+6. Add remote repository:
+   git remote add origin https://github.com/SerSavage/gvlegacy-character-builder.git
+
+7. Push to GitHub:
+   git push -u origin main
+
+========================================
+OR use the script:
+========================================
+
+cd /c/Users/serje/Documents/GVCharBuilder/github-ready
+bash upload-to-github.sh
+
+========================================
+If you get authentication errors:
+========================================
+
+1. Create Personal Access Token:
+   - Go to: https://github.com/settings/tokens
+   - Click "Generate new token (classic)"
+   - Name: "GV Builder Upload"
+   - Select scope: "repo"
+   - Click "Generate token"
+   - COPY THE TOKEN (you won't see it again!)
+
+2. When git asks for password, use the token instead
+
+3. Or configure git credentials:
+   git config --global user.name "SerSavage"
+   git config --global user.email "your-email@example.com"
+
+========================================
+
